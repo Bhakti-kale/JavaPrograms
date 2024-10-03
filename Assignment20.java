@@ -1,28 +1,29 @@
 package assignments;
 
+//Assignment 20-WAP on Method Overriding
 
-//Assignment 20-WAP on parameterized and non-parameterized this calling statement in java
 
-public class Assignment20 
+class ParentClass         //parent class
 {
-	Assignment20()
+	void login()
 	{
-		System.out.println("1st");
+		System.out.println("login with emailid");
 	}
-	
-	Assignment20(int a)
+	}
+
+public class Assignment20 extends ParentClass //child class
+{
+	void login()
 	{
-		this();                                         //calling nonparameterized constructor
-		System.out.println("2st");
+		System.out.println("login with mobileno");
 	}
-	
 
 	public static void main(String[] args)
 	{
-		new Assignment20(10);
-		//new Assignment20();
-		
+		Assignment20 s1= new Assignment20();
+		s1.login();
+
 	}
 
-
 }
+
